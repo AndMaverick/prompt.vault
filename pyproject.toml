@@ -7,7 +7,7 @@ name = "prompt.vault"
 version = "0.1.0"
 description = "Content-addressed prompt versioning: tags, diffs, rollback, and gated deploys. Treat prompts like code. Dependency-free Python."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "AndMaverick LLC" }]
 
