@@ -4,8 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "prompt.vault"
-version = "0.1.0"
-description = "Content-addressed prompt versioning: tags, diffs, rollback, and gated deploys. Treat prompts like code. Dependency-free Python."
+version = "0.2.0"
+description = "Version control for prompts with a verifiable audit trail: content-addressed versions, promotion stages, gated deploys that record every refusal, strict templates, a linter, line blame, and a hash-chained log. Dependency-free Python."
+classifiers = ["Typing :: Typed", "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+keywords = ["prompt", "prompt-management", "llmops", "versioning", "audit", "governance"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -13,3 +15,21 @@ authors = [{ name = "AndMaverick LLC" }]
 
 [tool.setuptools.packages.find]
 include = ["prompt_vault*"]
+
+[tool.setuptools.package-data]
+prompt_vault = ["py.typed"]
+
+[project.scripts]
+prompt-vault = "prompt_vault.cli:main"
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+strict = true
+files = ["prompt_vault"]
