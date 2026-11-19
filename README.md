@@ -91,7 +91,7 @@ integrity: event 2: content does not match its hash; event 2: triage v1 text doe
 python -m unittest discover -s tests -t . -v
 ```
 
-69 tests, including tampering in several forms (edited text, edited text with a recomputed digest, removed and reordered events, truncation) and gates that crash. Ruff and mypy strict run in CI on Python 3.10 to 3.13.
+78 tests, including tampering in several forms (edited text, edited text with a recomputed digest, removed and reordered events, truncation) and gates that crash. Ruff and mypy strict run in CI on Python 3.10 to 3.13.
 
 MIT licensed. Built by [AndMaverick LLC](https://www.andmaverick.com).
 
