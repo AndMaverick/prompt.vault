@@ -93,6 +93,8 @@ python -m unittest discover -s tests -t . -v
 
 78 tests, including tampering in several forms (edited text, edited text with a recomputed digest, removed and reordered events, truncation) and gates that crash. Ruff and mypy strict run in CI on Python 3.10 to 3.13.
 
+**Related repositories:** [eval.forge](https://github.com/AndMaverick/eval.forge) supplies the check a promotion gate should rest on. [mao-framework](https://github.com/AndMaverick/mao-framework) has a smaller module, `mao.vault`, that versions prompts behind gated deploys inside a governed run.
+
 MIT licensed. Built by [AndMaverick LLC](https://www.andmaverick.com).
 
 ---
